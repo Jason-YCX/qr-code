@@ -1,12 +1,38 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="app">
+    <div>今日数据</div>
+    <a-date-picker></a-date-picker>
+<!--    <div class="qr-code">-->
+<!--      <img :src="imgUrl" />-->
+<!--    </div>-->
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      imgUrl: ''
+    }
+  },
+
+  // created: function() {
+  //   let route = this.$route;
+  //   let id = route.query.id;
+  //   this.imgUrl = require('./assets/codes/' + id + '.png')
+  //   if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian)/i)) {
+  //     console.log('mobile')
+  //     //移动端CSS
+  //     require("./assets/css/mobile.css");
+  //   } else {
+  //     console.log('pc')
+  //     //PC端CSS
+  //     require("./assets/css/pc.css");
+  //   }
+  //
+  // }
+};
+</script>
 
 <style>
 #app {
@@ -29,4 +55,7 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+  .app {
+
+  }
 </style>
